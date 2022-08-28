@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Vim Markdown | Blog From TheoCheng</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content=" Reference: https://fokayx.com/2018/01/21/markdown-extension-on-vim.html   Mapping  ]] : 前往下一個 header [[ : 前往上一個 header ][ : 前往上一個同層級 header [] : 前往下一個同層級 header  Commands 在 Vim 裡面的命令列模式或者可視模式輸入指令，必須先啟用 :filetype plug on
+ :HeaderDecrease 將所有標題各升一級，例如 h2 -&gt; h1，在文件中已有設定 h1 的時候無法使用。如果有選取文件中的範圍，就只會作用在該選取範圍內。 :HeaderIncrease 将所有标题将一级，如果已有 h6 则无法使用。 :Toc 显示目录 :Toch 水平显示目录 :Toct 开启额外分页显示目录  ">
+    <meta name="generator" content="Hugo 0.92.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Vim Markdown" />
+<meta property="og:description" content=" Reference: https://fokayx.com/2018/01/21/markdown-extension-on-vim.html   Mapping  ]] : 前往下一個 header [[ : 前往上一個 header ][ : 前往上一個同層級 header [] : 前往下一個同層級 header  Commands 在 Vim 裡面的命令列模式或者可視模式輸入指令，必須先啟用 :filetype plug on
+ :HeaderDecrease 將所有標題各升一級，例如 h2 -&gt; h1，在文件中已有設定 h1 的時候無法使用。如果有選取文件中的範圍，就只會作用在該選取範圍內。 :HeaderIncrease 将所有标题将一级，如果已有 h6 则无法使用。 :Toc 显示目录 :Toch 水平显示目录 :Toct 开启额外分页显示目录  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/vim-markdown/" /><meta property="article:section" content="" />
+<meta property="article:published_time" content="2022-08-28T20:31:53+08:00" />
+<meta property="article:modified_time" content="2022-08-28T20:31:53+08:00" />
+
+<meta itemprop="name" content="Vim Markdown">
+<meta itemprop="description" content=" Reference: https://fokayx.com/2018/01/21/markdown-extension-on-vim.html   Mapping  ]] : 前往下一個 header [[ : 前往上一個 header ][ : 前往上一個同層級 header [] : 前往下一個同層級 header  Commands 在 Vim 裡面的命令列模式或者可視模式輸入指令，必須先啟用 :filetype plug on
+ :HeaderDecrease 將所有標題各升一級，例如 h2 -&gt; h1，在文件中已有設定 h1 的時候無法使用。如果有選取文件中的範圍，就只會作用在該選取範圍內。 :HeaderIncrease 将所有标题将一级，如果已有 h6 则无法使用。 :Toc 显示目录 :Toch 水平显示目录 :Toct 开启额外分页显示目录  "><meta itemprop="datePublished" content="2022-08-28T20:31:53+08:00" />
+<meta itemprop="dateModified" content="2022-08-28T20:31:53+08:00" />
+<meta itemprop="wordCount" content="43">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vim Markdown"/>
+<meta name="twitter:description" content=" Reference: https://fokayx.com/2018/01/21/markdown-extension-on-vim.html   Mapping  ]] : 前往下一個 header [[ : 前往上一個 header ][ : 前往上一個同層級 header [] : 前往下一個同層級 header  Commands 在 Vim 裡面的命令列模式或者可視模式輸入指令，必須先啟用 :filetype plug on
+ :HeaderDecrease 將所有標題各升一級，例如 h2 -&gt; h1，在文件中已有設定 h1 的時候無法使用。如果有選取文件中的範圍，就只會作用在該選取範圍內。 :HeaderIncrease 将所有标题将一级，如果已有 h6 则无法使用。 :Toc 显示目录 :Toch 水平显示目录 :Toct 开启额外分页显示目录  "/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Blog From TheoCheng
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <h1 class="f1">
+          Vim Markdown
+        </h1>
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links mid-gray">
+        <ul>
+<li>Reference: <a href="https://fokayx.com/2018/01/21/markdown-extension-on-vim.html">https://fokayx.com/2018/01/21/markdown-extension-on-vim.html</a>
+<!-- raw HTML omitted --></li>
+</ul>
+<h2 id="mapping">Mapping</h2>
+<ul>
+<li>]] : 前往下一個 header</li>
+<li>[[ : 前往上一個 header</li>
+<li>][ : 前往上一個同層級 header</li>
+<li>[] : 前往下一個同層級 header</li>
+</ul>
+<h2 id="commands">Commands</h2>
+<p>在 Vim 裡面的命令列模式或者可視模式輸入指令，必須先啟用 :<code>filetype plug on</code></p>
+<ul>
+<li>:HeaderDecrease
+將所有標題各升一級，例如 h2 -&gt; h1，在文件中已有設定 h1 的時候無法使用。如果有選取文件中的範圍，就只會作用在該選取範圍內。</li>
+<li><code>:HeaderIncrease</code>
+将所有标题将一级，如果已有 h6 则无法使用。</li>
+<li><code>:Toc</code>
+显示目录</li>
+<li><code>:Toch</code>
+水平显示目录</li>
+<li><code>:Toct</code>
+开启额外分页显示目录</li>
+</ul>
+
+      </div>
+    </article>
+  </div>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy;  Blog From TheoCheng 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
